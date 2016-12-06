@@ -14,7 +14,7 @@ $(window).scroll(function (event) {
     //     $(".skills-container").removeClass("fixed");
     // }
 
-    if (windowTop < $(".about").offset().top || windowTop > $(".photography").offset().top) {
+    if (windowTop < $(".main").offset().top + 50 || windowTop > $(".photography").offset().top) {
         $(".skills-container").removeClass("fixed");
     } else {
         $(".skills-container").addClass("fixed");
