@@ -143,6 +143,15 @@ body, .wrapper {
 .fixed {
   position: fixed; }
 
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: inherit; }
+
 header {
   background-image: url("images/home3.jpg");
   background-size: cover;
@@ -209,7 +218,8 @@ header {
       font-size: 50px;
       margin: 0 auto;
       text-align: center;
-      width: auto; }
+      width: auto;
+      font-weight: normal; }
       .about div .about-content h3:before {
         font-family: 'Sacramento', cursive;
         position: absolute;
@@ -267,7 +277,8 @@ header {
     z-index: 2;
     position: absolute;
     left: 0;
-    right: 0; }
+    right: 0;
+    font-weight: normal; }
     .technical h2:before {
       font-family: 'Sacramento', cursive;
       position: absolute;
@@ -344,7 +355,8 @@ header {
     right: 0;
     top: 35px;
     margin: 0 auto;
-    padding: 20px 0; }
+    padding: 20px 0;
+    font-weight: normal; }
     .photography h2:before {
       font-family: 'Sacramento', cursive;
       position: absolute;
@@ -354,6 +366,24 @@ header {
       color: rgba(0, 0, 0, 0.5);
       font-size: 100px;
       line-height: 2.5; }
+  .photography .display-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 99999999;
+    display: none; }
+    .photography .display-box img {
+      width: 700px;
+      height: 700px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%); }
   .photography .gallery {
     display: flex;
     flex-direction: row;
@@ -372,6 +402,40 @@ header {
         position: relative;
         border-radius: 5px;
         box-shadow: 1px 2px 2px grey; }
+        .photography .gallery .polaroid .polaroid-background .polaroid-overlay {
+          position: absolute;
+          margin: 0 auto;
+          top: 30px;
+          left: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          width: 220px;
+          height: 220px;
+          opacity: 0;
+          transition: all .5s;
+          color: white;
+          text-align: center;
+          padding-top: 20%; }
+          .photography .gallery .polaroid .polaroid-background .polaroid-overlay h3 {
+            font-family: 'Zeyada', cursive; }
+          .photography .gallery .polaroid .polaroid-background .polaroid-overlay div {
+            float: left;
+            width: 50%; }
+            .photography .gallery .polaroid .polaroid-background .polaroid-overlay div i {
+              border: 1px solid white;
+              border-radius: 50%;
+              padding: 10px; }
+            .photography .gallery .polaroid .polaroid-background .polaroid-overlay div:hover i {
+              background-color: rgba(255, 255, 255, 0.5);
+              color: rgba(0, 0, 0, 0.7);
+              border: 1px solid rgba(0, 0, 0, 0.7);
+              transition: all .5s; }
+          .photography .gallery .polaroid .polaroid-background .polaroid-overlay div.magnify {
+            padding-left: 30px; }
+          .photography .gallery .polaroid .polaroid-background .polaroid-overlay div.pin {
+            padding-right: 30px; }
+        .photography .gallery .polaroid .polaroid-background:hover .polaroid-overlay {
+          opacity: 1; }
       .photography .gallery .polaroid img {
         text-align: center;
         margin: 0 auto;
