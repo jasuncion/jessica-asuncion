@@ -9,6 +9,7 @@ $(document).ready(function() {
   $(".container").shapeshift();
 
   $('.display-box').click(function(){
+    $(".display-box img:last-child").remove()
     $(".display-box").css('display', 'none');
   });
 });
