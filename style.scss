@@ -17,6 +17,7 @@ body, .wrapper {
 .fixed {
 	position: fixed;
 	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform: translateZ(0);
 }
 
 .about-content.slide-right.in-view {
@@ -97,6 +98,7 @@ header {
 	height: 500px;
 	background: url('images/pencils.jpg') no-repeat center center fixed;
 	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform: translateZ(0);
 	background-size: cover;
 	position: relative;
 	z-index: 999999;
@@ -337,16 +339,18 @@ header {
 		display: none;
 
 		img {
-			width: 700px;
-			height: 700px;
-			position: absolute;
-		    left: 0;
-		    right: 0;
-		    margin: 0 auto;
+	  	    position: fixed;
 		    top: 50%;
-		    transform: translateY(-50%);
-		    border-radius: 5px;
+		    left: 50%;
+		    width: 700px;
+		    height: 700px;
+		    -webkit-transform: translate(-50%,-50%);
+		    -moz-transform: translate(-50%,-50%);
+		    -ms-transform: translate(-50%,-50%);
+		    -o-transform: translate(-50%,-50%);
+	    	transform: translate(-50%,-50%);
 		}
+		
 	}
 
 	.gallery {
@@ -391,11 +395,7 @@ header {
 
 					div {
 						float:left;
-						width: 50%;
-
-						a {
-							
-						}
+						width: 100%;
 
 						i {
 							border: 1px solid white;
@@ -412,12 +412,12 @@ header {
 					}
 
 					div.magnify {
-						padding-left: 30px;
+						padding: 0 30px;
 					}
 
-					div.pin {
-						padding-right: 30px;
-					}
+					// div.pin {
+					// 	padding-right: 30px;
+					// }
 				}
 
 				&:hover .polaroid-overlay {

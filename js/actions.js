@@ -30,7 +30,7 @@ $(window).scroll(function (event) {
     if (windowTop > $(".main").offset().top && windowTop < $(".technical").offset().top) {
       $('.about-content').addClass('in-view');
       $('.about-content').removeClass('animation-element');
-    } else {
+    } else if (windowTop > $(".about").offset().top || windowTop < $(".main").offset().top) {
       $('.about-content').removeClass('in-view');
       $('.about-content').addClass('animation-element');
     }

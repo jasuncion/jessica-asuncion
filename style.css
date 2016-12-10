@@ -142,7 +142,8 @@ body, .wrapper {
 
 .fixed {
   position: fixed;
-  -webkit-transform: translate3d(0, 0, 0); }
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0); }
 
 .about-content.slide-right.in-view {
   opacity: 1;
@@ -212,6 +213,7 @@ header {
   height: 500px;
   background: url("images/pencils.jpg") no-repeat center center fixed;
   -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
   background-size: cover;
   position: relative;
   z-index: 999999; }
@@ -398,15 +400,16 @@ header {
     z-index: 99999999;
     display: none; }
     .photography .display-box img {
+      position: fixed;
+      top: 50%;
+      left: 50%;
       width: 700px;
       height: 700px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      top: 50%;
-      transform: translateY(-50%);
-      border-radius: 5px; }
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
   .photography .gallery {
     display: flex;
     flex-direction: row;
@@ -443,7 +446,7 @@ header {
             font-family: 'Zeyada', cursive; }
           .photography .gallery .polaroid .polaroid-background .polaroid-overlay div {
             float: left;
-            width: 50%; }
+            width: 100%; }
             .photography .gallery .polaroid .polaroid-background .polaroid-overlay div i {
               border: 1px solid white;
               border-radius: 50%;
@@ -454,9 +457,7 @@ header {
               border: 1px solid rgba(0, 0, 0, 0.7);
               transition: all .5s; }
           .photography .gallery .polaroid .polaroid-background .polaroid-overlay div.magnify {
-            padding-left: 30px; }
-          .photography .gallery .polaroid .polaroid-background .polaroid-overlay div.pin {
-            padding-right: 30px; }
+            padding: 0 30px; }
         .photography .gallery .polaroid .polaroid-background:hover .polaroid-overlay {
           opacity: 1; }
       .photography .gallery .polaroid img {
